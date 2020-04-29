@@ -14,7 +14,7 @@ after_success:
   - docker build -t cml8198/multi-server ./server
   - docker build -t cml8198/multi-worker ./worker
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
-  - docker push cml8198/multi-client ./client
-  - docker push cml8198/multi-nginx ./nginx
-  - docker push cml8198/multi-server ./server
-  - docker push cml8198/multi-worker ./worker
+  - docker push cml8198/multi-client
+  - docker push cml8198/multi-nginx
+  - docker push cml8198/multi-server
+  - docker push cml8198/multi-worker
